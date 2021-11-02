@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Fuentes de Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>iCream | Contacto</title>
+  </head>
+  <body>
+    <header>
+      <div class="logoContainer">
+        <img class="logoContainer__logo" src="../img/logo.svg" alt="logo" />
+        <h1 class="logoContainer__titulo">iCream</h1>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./helados.html">Helados</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./faq.html">Preguntas Frecuentes</a>
+          </li>
+          <li class="nav__item nav__item--bold">
+            <a class="nav__link" href="./contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="contacto__main">
+      <!--Contenedor del formulario-->
+      <div class="concacto__div">
+        <!--Título y sub-->
+        <h1 class="contacto__div__title">¡Contactate con nosotros!</h1>
+        <h1 class="contacto__div__text">
+          Puedes enviarnos un pequeño mensaje y te responderemos cuanto antes.
+        </h1>
+
+        <!--Formulario-->
+        <form class="contacto__form" action="">
+          <input
+            class="contacto__input"
+            type="text"
+            name="nombre"
+            id="nombre"
+            placeholder="Nombre y Apellido"
+          />
+          <input
+            class="contacto__input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@gmail.com"
+          />
+          <textarea
+            class="contacto__input"
+            rows="10"
+            cols="40"
+            name="comment"
+            form="usrform"
+            placeholder="Escribinos!"
+          ></textarea>
+          <div>
+            <input type="checkbox" name="news" id="news" />
+            <label for="news">Deseo recibir el Newsletter</label>
+          </div>
+          <div>
+            <input type="checkbox" name="terms" id="terms" />
+            <label for="terms"
+              >He leído y acepto los términos y condiciones de uso</label
+            >
+          </div>
+          <button class="contacto__button">Enviar</button>
+        </form>
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+      <!--Contenedor para los íconos y enlaces de redes sociales-->
+      <div class="footer__container">
+        <a class="footer__link footer__item" href=""
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a class="footer__link footer__item" href=""
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a class="footer__link footer__item" href=""
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <!--Información de copyright-->
+      <h1 class="footer__titulo">Copyright © iCream, Inc. 1999-2021</h1>
+    </footer>
+    <!--Fin del body-->
+  </body>
+</html>
