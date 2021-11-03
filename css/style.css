@@ -15,55 +15,24 @@ svg {
   vertical-align: middle;
 }
 
-.logoContainer {
-  display: flex;
-  justify-content: center;
-}
-
 .logoContainer__logo {
-  margin-right: 0.5rem;
   filter: invert(22%) sepia(83%) saturate(3635%) hue-rotate(213deg)
     brightness(105%) contrast(105%);
 }
 
 .logoContainer__titulo {
-  display: inline;
   color: #0066ff;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 3rem;
 }
 
-.nav {
-  padding: 0.5rem;
-  background-color: rgba(0, 102, 255, 0.637);
+.my-nav {
+  background-color: rgb(0, 102, 255);
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
-  border-radius: 2rem;
-}
-
-.nav__list {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-evenly;
+  border-radius: 1.5rem;
   font-family: "Nunito", sans-serif;
-  font-size: 1.5rem;
-}
-
-.nav__item {
-  font-weight: 400;
-}
-
-.nav__item--bold {
-  font-weight: 900;
-}
-
-.nav__link {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.nav__link:hover {
-  opacity: 0.65;
+  font-weight: 600;
 }
 
 .footer {
@@ -101,9 +70,6 @@ svg {
 }
 
 .index__div {
-  margin: 4rem;
-  padding: 5rem;
-  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(2rem);
@@ -111,38 +77,28 @@ svg {
 }
 
 .index__title {
-  width: 90%;
   color: #12121b;
   font-family: "Nunito", sans-serif;
-  font-size: 7rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.1;
 }
 
 .index__title--bold {
   color: #0066ff;
-  font-weight: 400;
 }
 
 .index__text {
-  padding-top: 1.5rem;
-  width: 85%;
   font-family: "Nunito", sans-serif;
-  font-size: 2rem;
   line-height: 1;
+  font-weight: 200;
 }
 
 .index__button {
   border: none;
-  margin-top: 1.5rem;
-  font-size: 2rem;
-  color: white;
   background: #0066ff;
-  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 3rem;
   padding: 0.1rem 1rem 0.1rem 1rem;
   font-family: "Montserrat", sans-serif;
-
   transition: transform 500ms ease;
 }
 
