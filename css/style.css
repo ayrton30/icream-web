@@ -15,10 +15,7 @@ svg {
   vertical-align: middle;
 }
 
-.logoContainer__logo {
-  filter: invert(22%) sepia(83%) saturate(3635%) hue-rotate(213deg)
-    brightness(105%) contrast(105%);
-}
+
 
 .logoContainer__titulo {
   color: #0066ff;
