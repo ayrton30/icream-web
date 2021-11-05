@@ -1,6 +1,10 @@
 @use "../vars" as *;
 
-.nav__titulo {
+.nav_img {
+  width: 3.5rem;
+}
+
+.nav__title {
   color: $azul;
   font-family: $fuente-principal;
   font-weight: 900;
