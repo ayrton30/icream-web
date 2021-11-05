@@ -1,0 +1,16 @@
+@use "../vars" as *;
+
+.footer {
+  background-color: rgba($negro, 0.068);
+  font-family: $fuente-principal;
+}
+
+.footer__item {
+  color: $negro;
+  text-decoration: none;
+  transition: transform 500ms ease;
+}
+
+.footer__item:hover {
+  transform: scale(1.2);
+}

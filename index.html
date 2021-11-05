@@ -38,18 +38,24 @@
     <!--Etiqueta semántica: header-->
     <header>
       <!--Contenedor del logo y nombre de la marca-->
-      <div class="container d-flex justify-content-center align-items-center text-center">
-        <img
-          class="mx-1"
-          src="img/logo.png"
-          alt="logo"
-        />
-        <h1 class="d-inline logoContainer__titulo">iCream</h1>
+      <div
+        class="
+          container
+          d-flex
+          justify-content-center
+          align-items-center
+          text-center
+        "
+      >
+        <img class="mx-1" src="img/logo.png" alt="logo" />
+        <h1 class="d-inline nav__titulo">iCream</h1>
       </div>
 
       <!--Barra de navegación responsive-->
       <!--Etiqueta semántica: navegación-->
-      <nav class="navbar navbar-expand-lg navbar-dark fs-2 mx-2 my-nav">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark fs-2 mx-2 shadow-lg my-nav"
+      >
         <div class="container-fluid d-flex justify-content-center text-center">
           <button
             class="navbar-toggler"
@@ -100,7 +106,9 @@
       </nav>
     </header>
 
+    <!--Etiqueta main-->
     <main>
+      <!--Contenedor de texto y boton-->
       <div
         class="
           container
@@ -111,6 +119,7 @@
           index__div
         "
       >
+        <!--Texto de presentación-->
         <h1 class="fs-1 index__title">
           Los mejores
           <span class="index__title--bold">helados vegetales </span>del país
@@ -121,6 +130,7 @@
           ducimus soluta eos consequuntur quam asperiores vero tempore sed
           provident! Nostrum, cum?
         </p>
+        <!--Botón que lleva pag. helados.html-->
         <button class="fs-4 my-1 shadow-lg index__button" type="button">
           <a class="index__link" href="./pages/helados.html">Ver productos</a>
         </button>
@@ -128,21 +138,21 @@
     </main>
 
     <!--Footer-->
-    <footer class="footer">
+    <footer class="p-2 footer">
       <!--Contenedor para los íconos y enlaces de redes sociales-->
-      <div class="footer__container">
-        <a class="footer__link footer__item" href=""
+      <div class="d-flex justify-content-center">
+        <a class="fs-2 mx-3 footer__item" href=""
           ><i class="fab fa-facebook-f"></i
         ></a>
-        <a class="footer__link footer__item" href=""
+        <a class="fs-2 mx-3 footer__item" href=""
           ><i class="fab fa-instagram"></i
         ></a>
-        <a class="footer__link footer__item" href=""
+        <a class="fs-2 mx-3 footer__item" href=""
           ><i class="fab fa-twitter"></i
         ></a>
       </div>
       <!--Información de copyright-->
-      <h1 class="footer__titulo">Copyright © iCream, Inc. 1999-2021</h1>
+      <h1 class="fs-4 my-2 text-center">Copyright © iCream, Inc. 1999-2021</h1>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->

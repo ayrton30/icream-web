@@ -33,18 +33,24 @@
     <!--Etiqueta semántica: header-->
     <header>
       <!--Contenedor del logo y nombre de la marca-->
-      <div class="container d-flex justify-content-center align-items-center text-center">
-        <img
-          class="mx-1"
-          src="../img/logo.png"
-          alt="logo"
-        />
-        <h1 class="d-inline logoContainer__titulo">iCream</h1>
+      <div
+        class="
+          container
+          d-flex
+          justify-content-center
+          align-items-center
+          text-center
+        "
+      >
+        <img class="mx-1" src="../img/logo.png" alt="logo" />
+        <h1 class="d-inline nav__titulo">iCream</h1>
       </div>
 
       <!--Barra de navegación responsive-->
       <!--Etiqueta semántica: navegación-->
-      <nav class="navbar navbar-expand-lg navbar-dark fs-2 mx-2 my-nav">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark fs-2 mx-2 shadow-lg my-nav"
+      >
         <div class="container-fluid d-flex justify-content-center text-center">
           <button
             class="navbar-toggler"
@@ -91,9 +97,10 @@
       </nav>
     </header>
 
-    <!--MAIN-->
+    <!--Etiqueta main-->
     <main class="helados__main">
       <section class="helados__section">
+        <!--Texto de presentación-->
         <h1 class="helados__section__title">
           ¡Nuestros helados son los mejores!
         </h1>
@@ -103,7 +110,10 @@
           perferendis totam expedita, quibusdam velit soluta hic aliquam tempora
           voluptates? Fugiat fuga vel culpa aut!
         </p>
+
+        <!--Grid de helados-->
         <div class="helados__grid">
+          <!--Helado 1-->
           <article class="helados__article">
             <img class="helados__img" src="../img/frutilla.png" alt="" />
             <h2 class="helados__article__title">Helado de frutilla</h2>
@@ -114,6 +124,7 @@
             </p>
           </article>
 
+          <!--Helado 2-->
           <article class="helados__article">
             <img class="helados__img" src="../img/dulceLeche.png" alt="" />
             <h2 class="helados__article__title">Helado de dulce de leche</h2>
@@ -124,6 +135,7 @@
             </p>
           </article>
 
+          <!--Helado 3-->
           <article class="helados__article">
             <img class="helados__img" src="../img/chocolate.png" alt="" />
             <h2 class="helados__article__title">Helado de chocolate</h2>
@@ -134,6 +146,7 @@
             </p>
           </article>
 
+          <!--Helado 4-->
           <article class="helados__article">
             <img class="helados__img" src="../img/naranja.png" alt="" />
             <h2 class="helados__article__title">Helado de naranja</h2>
@@ -149,6 +162,7 @@
 
       <section class="helados__section">
         <h2 class="helados__section__title">Información nutricional</h2>
+        <!--Tabla de información nutricional-->
         <table border="1" class="helados__table">
           <tr>
             <td>Valor nutricional</td>
@@ -183,21 +197,21 @@
     </main>
 
     <!--Footer-->
-    <footer class="footer">
+    <footer class="p-2 footer">
       <!--Contenedor para los íconos y enlaces de redes sociales-->
-      <div class="footer__container">
-        <a class="footer__link footer__item" href=""
+      <div class="d-flex justify-content-center">
+        <a class="fs-2 mx-3 footer__item" href=""
           ><i class="fab fa-facebook-f"></i
         ></a>
-        <a class="footer__link footer__item" href=""
+        <a class="fs-2 mx-3 footer__item" href=""
           ><i class="fab fa-instagram"></i
         ></a>
-        <a class="footer__link footer__item" href=""
+        <a class="fs-2 mx-3 footer__item" href=""
           ><i class="fab fa-twitter"></i
         ></a>
       </div>
       <!--Información de copyright-->
-      <h1 class="footer__titulo">Copyright © iCream, Inc. 1999-2021</h1>
+      <h1 class="fs-4 my-2 text-center">Copyright © iCream, Inc. 1999-2021</h1>
     </footer>
 
     <!-- JavaScript Bundle with Popper -->

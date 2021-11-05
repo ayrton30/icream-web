@@ -15,55 +15,33 @@ svg {
   vertical-align: middle;
 }
 
-
-
-.logoContainer__titulo {
+.nav__titulo {
   color: #0066ff;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 .my-nav {
-  background-color: rgb(0, 102, 255);
-  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
-  border-radius: 1.5rem;
+  background-color: #0066ff;
   font-family: "Nunito", sans-serif;
+  border-radius: 1.5rem;
   font-weight: 600;
 }
 
 .footer {
-  padding: 1rem;
-  background-color: rgba(35, 40, 48, 0.068);
+  background-color: rgba(18, 18, 27, 0.068);
   font-family: "Nunito", sans-serif;
 }
 
-.footer__container {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  font-size: 2.2rem;
-}
-
 .footer__item {
-  font-size: 2.5rem;
+  color: #12121b;
+  text-decoration: none;
   transition: transform 500ms ease;
 }
 
 .footer__item:hover {
   transform: scale(1.2);
-}
-
-.footer__link {
-  color: #12121b;
-  text-decoration: none;
-}
-
-.footer__titulo {
-  font-size: 1.2rem;
-  font-weight: 200;
-  text-align: center;
-  margin-top: 0.5rem;
 }
 
 .index__div {
@@ -145,7 +123,6 @@ svg {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.25);
@@ -156,7 +133,7 @@ svg {
 .helados__article__title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #0066ffe0;
+  color: #0066ff;
 }
 
 .helados__article__text {
@@ -179,7 +156,6 @@ svg {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
   font-weight: 200;
-
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);
 }
@@ -284,13 +260,11 @@ svg {
 .faq__QA {
   padding: 2.5rem;
   margin: 0 4rem 0 4rem;
-
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);
-
   transition: transform 500ms ease;
 }
 
@@ -306,12 +280,10 @@ svg {
 }
 
 .faq__QA__a {
-  color: #12121b;
+  color: #ffffff;
   font-weight: 600;
   line-height: 1.2;
   font-size: 1.5rem;
-
-  color: white;
   background: #0066ff;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 1rem;
@@ -331,12 +303,11 @@ svg {
   margin: 0 4rem 4rem 4rem;
 }
 
-.concacto__div {
+.contacto__div {
   text-align: center;
   width: 55%;
   margin: 4rem auto;
   padding: 1.5rem;
-
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.705);
@@ -364,7 +335,6 @@ svg {
   font-size: 1.3rem;
   border-radius: 1rem;
   padding: 0.3rem;
-  font-family: "Nunito", sans-serif;
 }
 
 .contacto__form {
@@ -377,9 +347,10 @@ svg {
 .contacto__button {
   border: none;
   font-size: 1.5rem;
-  color: white;
+  color: #ffffff;
   background: #0066ff;
   border-radius: 3rem;
   padding: 0.1rem 1rem 0.1rem 1rem;
-  font-family: "Nunito", sans-serif;
 }
+
+/*# sourceMappingURL=style.css.map */

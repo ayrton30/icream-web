@@ -1,0 +1,43 @@
+@use "../vars" as *;
+
+.index__div {
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
+}
+
+.index__title {
+  color: $negro;
+  font-family: $fuente-principal;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.index__title--bold {
+  color: $azul;
+}
+
+.index__text {
+  font-family: $fuente-principal;
+  line-height: 1;
+  font-weight: 200;
+}
+
+.index__button {
+  border: none;
+  background: $azul;
+  border-radius: 3rem;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  font-family: $fuente-secundaria;
+  transition: transform 500ms ease;
+}
+
+.index__button:hover {
+  transform: scale(1.05);
+}
+
+.index__link {
+  color: #ffffff;
+  text-decoration: none;
+}
