@@ -99,72 +99,168 @@
     </header>
 
     <!--Etiqueta main-->
-    <main class="helados__main">
-      <section class="helados__section">
+    <main class="helados">
+      <section class="container text-center mt-3">
         <!--Texto de presentación-->
-        <h1 class="helados__section__title">
+        <h1 class="display-1 fw-normal helados__title">
           ¡Nuestros helados son los mejores!
         </h1>
-        <p class="helados__section____text">
+        <p class="fs-3 lh-1 mb-5">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni omnis
           vel delectus maxime voluptatem consectetur eaque iusto blanditiis nemo
           perferendis totam expedita, quibusdam velit soluta hic aliquam tempora
           voluptates? Fugiat fuga vel culpa aut!
         </p>
 
-        <!--Grid de helados-->
-        <div class="helados__grid">
-          <!--Helado 1-->
-          <article class="helados__article">
-            <img class="helados__img" src="../img/frutilla.png" alt="" />
-            <h1 class="helados__article__title">Helado de frutilla</h1>
-            <p class="helados__article__text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
-              dolor quisquam aut quidem, consectetur laudantium nulla distinctio
-              enim sequi? Maxime fuga consequatur explicabo.
-            </p>
-          </article>
-
-          <!--Helado 2-->
-          <article class="helados__article">
-            <img class="helados__img" src="../img/dulceLeche.png" alt="" />
-            <h1 class="helados__article__title">Helado de dulce de leche</h1>
-            <p class="helados__article__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-              sequi vitae quam atque optio. Quos quisquam ratione tempora eius
-              vero eos ducimus ut iure, numquam, a, doloremque nihil.
-            </p>
-          </article>
-
-          <!--Helado 3-->
-          <article class="helados__article">
-            <img class="helados__img" src="../img/chocolate.png" alt="" />
-            <h1 class="helados__article__title">Helado de chocolate</h1>
-            <p class="helados__article__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-              praesentium quam numquam facilis asperiores fuga officiis,
-              consectetur voluptatum inventore, aut iure!
-            </p>
-          </article>
-
-          <!--Helado 4-->
-          <article class="helados__article">
-            <img class="helados__img" src="../img/naranja.png" alt="" />
-            <h1 class="helados__article__title">Helado de naranja</h1>
-            <p class="helados__article__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-              maiores laboriosam eius aut. Cupiditate et nobis, obcaecati eaque
-              tempore nam dolorem magnam dolorum ad qui tenetur suscipit vitae
-              eligendi odio.
-            </p>
-          </article>
+        <!--Sistema de grillas bootstrap-->
+        <div class="row row-cols-1 row-cols-sm-2 g-3">
+          <div class="col">
+            <!--Helado 1-->
+            <article
+              class="
+                container
+                d-flex
+                flex-column
+                justify-content-around
+                align-items-center
+                helados__article
+                mb-3
+              "
+            >
+              <img
+                class="
+                  w-25
+                  rounded-circle
+                  mt-1
+                  helados__article__img--heladoFrutilla
+                "
+                src="../img/frutilla.jpg"
+                alt=""
+              />
+              <h1 class="display-3 helados__article__title">
+                Helado de frutilla
+              </h1>
+              <p class="fs-4 lh-sm">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+                dolor quisquam aut quidem, consectetur laudantium nulla
+                distinctio enim sequi? Maxime fuga consequatur explicabo.
+              </p>
+            </article>
+          </div>
+          <div class="col">
+            <!--Helado 2-->
+            <article
+              class="
+                container
+                d-flex
+                flex-column
+                justify-content-around
+                align-items-center
+                helados__article
+                mb-3
+              "
+            >
+              <img
+                class="
+                  w-25
+                  rounded-circle
+                  mt-1
+                  helados__article__img--heladoVainilla
+                "
+                src="../img/vainilla.jpg"
+                alt=""
+              />
+              <h1 class="display-3 helados__article__title">
+                Helado de vainilla
+              </h1>
+              <p class="fs-4 lh-sm">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+                dolor quisquam aut quidem, consectetur laudantium nulla
+                distinctio enim sequi? Maxime fuga consequatur explicabo.
+              </p>
+            </article>
+          </div>
+          <div class="col">
+            <!--Helado 3-->
+            <article
+              class="
+                container
+                d-flex
+                flex-column
+                justify-content-around
+                align-items-center
+                helados__article
+                mb-3
+              "
+            >
+              <img
+                class="
+                  w-25
+                  rounded-circle
+                  mt-1
+                  helados__article__img--heladoDulceLeche
+                "
+                src="../img/dulcedeleche.jpg"
+                alt=""
+              />
+              <h1 class="display-3 helados__article__title">
+                Helado de dulce de leche
+              </h1>
+              <p class="fs-4 lh-sm">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+                dolor quisquam aut quidem, consectetur laudantium nulla
+                distinctio enim sequi? Maxime fuga consequatur explicabo.
+              </p>
+            </article>
+          </div>
+          <div class="col">
+            <!--Helado 4-->
+            <article
+              class="
+                container
+                d-flex
+                flex-column
+                justify-content-around
+                align-items-center
+                helados__article
+                mb-3
+              "
+            >
+              <img
+                class="
+                  w-25
+                  rounded-circle
+                  mt-1
+                  helados__article__img--heladoChocolate
+                "
+                src="../img/chocolate.jpg"
+                alt=""
+              />
+              <h1 class="display-3 helados__article__title">
+                Helado de chocolate
+              </h1>
+              <p class="fs-4 lh-sm">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non
+                dolor quisquam aut quidem, consectetur laudantium nulla
+                distinctio enim sequi? Maxime fuga consequatur explicabo.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="helados__section">
-        <h1 class="helados__section__title">Información nutricional</h1>
+      <section class="container text-center mt-3">
+        <h1 class="display-1 fw-normal helados__title">
+          Información nutricional
+        </h1>
+        <p class="fs-3 lh-1 mb-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni omnis
+          vel delectus maxime voluptatem consectetur eaque iusto blanditiis nemo
+          perferendis totam expedita, quibusdam velit soluta hic aliquam tempora
+          voluptates? Fugiat fuga vel culpa aut!
+        </p>
         <!--Tabla de información nutricional-->
-        <table border="1" class="helados__table">
+        <table class="table fs-5 w-100 mb-5 helados__table">
           <tr>
             <td>Valor nutricional</td>
             <td>120 kcal</td>

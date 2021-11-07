@@ -11195,77 +11195,46 @@ svg {
   text-decoration: none;
 }
 
-.helados__main {
+.helados {
   font-family: "Nunito", sans-serif;
   color: #12121b;
-  margin: 0 4rem 4rem 4rem;
 }
-
-.helados__grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 1rem;
-}
-
-.helados__section {
-  margin-top: 3rem;
-  text-align: center;
-}
-
-.helados__section__title {
-  font-size: 3.5rem;
-  font-weight: 600;
+.helados__title {
   color: #0066ff;
 }
-
-.helados__section____text {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 2rem;
-  margin-bottom: 3rem;
-}
-
 .helados__article {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);
+  transition: transform 500ms ease;
 }
-
+.helados__article:hover {
+  transform: scale(1.05);
+}
 .helados__article__title {
-  font-size: 2.5rem;
-  font-weight: 600;
   color: #0066ff;
 }
-
-.helados__article__text {
-  font-size: 1.5rem;
-  font-weight: 400;
-  padding: 0 2rem 2rem 2rem;
+.helados__article__img--heladoFrutilla {
+  box-shadow: 0 1rem 3rem 0 rgba(233, 150, 144, 0.6);
+  border: 4px solid #e99690;
 }
-
-.helados__img {
-  margin: 1rem;
-  padding: 0.5rem;
-  width: 5rem;
-  border-radius: 50%;
-  border: 1px solid #12121b;
-  box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.342);
+.helados__article__img--heladoDulceLeche {
+  box-shadow: 0 1rem 3rem 0 rgba(206, 134, 73, 0.6);
+  border: 4px solid #ce8649;
 }
-
+.helados__article__img--heladoVainilla {
+  box-shadow: 0 1rem 3rem 0 rgba(239, 178, 85, 0.6);
+  border: 4px solid #efb255;
+}
+.helados__article__img--heladoChocolate {
+  box-shadow: 0 1rem 3rem 0 rgba(66, 38, 27, 0.6);
+  border: 4px solid #42261b;
+}
 .helados__table {
-  width: 75%;
-  margin: 3rem auto;
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
-  font-weight: 200;
+  border-color: #0066ff;
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);
 }
