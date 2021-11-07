@@ -104,102 +104,137 @@
     </header>
 
     <!--Etiqueta main-->
-    <main class="nosotros__main">
-      <h1 class="nosotros__title">¡Quienes somos!</h1>
+    <main>
+      <div class="container nosotros">
+        <h1 class="display-1 fw-normal mt-4 text-center nosotros__title">
+          ¡Quienes somos!
+        </h1>
 
-      <!--Sección con información de los jefes-->
-      <section class="nosotros__section">
-        <!--Jefe 1-->
-        <article class="nosotros__article">
-          <img
-            class="nosotros__img"
-            src="../img/hombre.jpg"
-            alt="hombre de brazos cruzados"
-          />
-          <h2 class="nosotros__article__title">Anton Buendia</h2>
-          <h3 class="nosotro__article__text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam
-            illo, voluptatem quos voluptate, veritatis asperiores nihil
-            recusandae amet corrupti officia minima voluptates rem. Sunt
-            deserunt laboriosam earum tempora ad aperiam praesentium fugit ut
-            quos.
-          </h3>
-          <div class="nosotro__article__iconContainer">
-            <a href=""
-              ><i class="fas fa-envelope nosotro__article__icon"></i
-            ></a>
-            <a href=""
-              ><i class="fab fa-linkedin-in nosotro__article__icon"></i
-            ></a>
-          </div>
-        </article>
+        <div
+          id="carouselControls"
+          class="carousel animate__animated animate__zoomIn"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!--Jefe 1-->
+              <article class="nosotros__article">
+                <img
+                  class="rounded mx-auto d-block my-3"
+                  src="../img/hombre.jpg"
+                  alt="hombre de brazos cruzados"
+                />
+                <h1 class="fs-1 nosotros__article__title">Anton Buendia</h1>
+                <h2>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Aperiam illo, voluptatem quos voluptate, veritatis asperiores
+                  nihil recusandae amet corrupti officia minima voluptates rem.
+                  Sunt deserunt laboriosam earum tempora ad aperiam praesentium
+                  fugit ut quos.Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit.
+                </h2>
+                <div class="fs-1 d-flex justify-content-center gap-4">
+                  <a href=""
+                    ><i class="fas fa-envelope nosotro__article__icon"></i
+                  ></a>
+                  <a href=""
+                    ><i class="fab fa-linkedin-in nosotro__article__icon"></i
+                  ></a>
+                </div>
+              </article>
+            </div>
 
-        <!--Jefe 2-->
-        <article class="nosotros__article">
-          <img class="nosotros__img" src="../img/mujer.jpg" alt="mujer" />
-          <h2 class="nosotros__article__title">Mariana Sala</h2>
-          <h3 class="nosotro__article__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt
-            rem, error qui quae, dolor cum est et, veniam ut odit natus
-            doloribus repellat eligendi corrupti sit quisquam nobis? Aliquid,
-            modi fugit.
-          </h3>
-          <div class="nosotro__article__iconContainer">
-            <a href=""
-              ><i class="fas fa-envelope nosotro__article__icon"></i
-            ></a>
-            <a href=""
-              ><i class="fab fa-linkedin-in nosotro__article__icon"></i
-            ></a>
+            <!--Otro item-->
+            <div class="carousel-item">
+              <!--Jefe 2-->
+              <article class="nosotros__article">
+                <img
+                  class="rounded mx-auto d-block my-3"
+                  src="../img/mujer.jpg"
+                  alt="mujer"
+                />
+                <h1 class="fs-1 nosotros__article__title">Mariana Sala</h1>
+                <h2 class="">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Aperiam illo, voluptatem quos voluptate, veritatis asperiores
+                  nihil recusandae amet corrupti officia minima voluptates rem.
+                  Sunt deserunt laboriosam earum tempora ad aperiam praesentium
+                  fugit ut quos.Lorem ipsum dolor sit amet consectetur,
+                  adipisicing elit.
+                </h2>
+                <div class="fs-1 d-flex justify-content-center gap-4">
+                  <a href=""
+                    ><i class="fas fa-envelope nosotro__article__icon"></i
+                  ></a>
+                  <a href=""
+                    ><i class="fab fa-linkedin-in nosotro__article__icon"></i
+                  ></a>
+                </div>
+              </article>
+            </div>
           </div>
-        </article>
-      </section>
-
-      <h1 class="nosotros__title">Nos encontramos en todo el país:</h1>
-      <section class="nosotros__section">
-        <!--iframe de Google Maps-->
-        <div class="mapouter">
-          <div class="gmap_canvas">
-            <iframe
-              width="600"
-              height="500"
-              id="gmap_canvas"
-              src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-            ></iframe
-            ><a href="https://123movies-to.org"></a><br /><style>
-              .mapouter {
-                position: relative;
-                text-align: right;
-                height: 500px;
-                width: 600px;
-              }</style
-            ><a href="https://www.embedgooglemap.net"
-              >embed code for google map</a
-            ><style>
-              .gmap_canvas {
-                overflow: hidden;
-                background: none !important;
-                height: 500px;
-                width: 600px;
-                display: inline-block;
-              }
-            </style>
-          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselControls"
+            data-bs-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon rounded-circle p-4 bg-dark"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselControls"
+            data-bs-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon rounded-circle p-4 bg-dark"
+              aria-hidden="true"
+            ></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
 
-        <!--Direcciones de locales de venta-->
-        <ul class="nosotros__list">
-          <li>Direccion1</li>
-          <li>Direccion1</li>
-          <li>Direccion1</li>
-          <li>Direccion1</li>
-          <li>Direccion1</li>
-        </ul>
-      </section>
+        <h1 class="display-2 text-center mt-4 nosotros__title">
+          Nos encontramos en todo el país
+        </h1>
+        <section
+          class="
+            container
+            d-flex
+            flex-column
+            align-items-center
+            justify-content-center
+            gap-3
+            mb-5
+          "
+        >
+          <!--iframe de Google Maps-->
+          <iframe
+            width="100%"
+            height="300px"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=CoderHouse&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+
+          <!--Direcciones de locales de venta-->
+          <ul class="fs-4 fw-normal">
+            <li>Direccion1</li>
+            <li>Direccion1</li>
+            <li>Direccion1</li>
+            <li>Direccion1</li>
+            <li>Direccion1</li>
+          </ul>
+        </section>
+      </div>
     </main>
 
     <!--Footer-->

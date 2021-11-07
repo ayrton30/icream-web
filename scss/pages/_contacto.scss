@@ -1,58 +1,34 @@
 @use "../vars" as *;
 
-.contacto__main {
+.contacto {
   font-family: $fuente-principal;
   color: $negro;
-  margin: 0 4rem 4rem 4rem;
-}
 
-.contacto__div {
-  text-align: center;
-  width: 55%;
-  margin: 4rem auto;
-  padding: 1.5rem;
+  &__div {
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
 
-  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
-  border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.705);
-  backdrop-filter: blur(2rem);
-  -webkit-backdrop-filter: blur(2rem);
-}
+    &__title {
+      color: $azul;
+    }
+  }
 
-.contacto__div__title {
-  font-size: 3rem;
-  font-weight: 400;
-  line-height: 3rem;
-  color: $azul;
-}
+  &__input {
+    border: 0.1rem solid $azul;
+    background-color: rgba(255, 255, 255, 0.507);
+    border-radius: 1rem;
+  }
 
-.contacto__div__text {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-}
+  &__button {
+    border: none;
+    background: $azul;
+    border-radius: 3rem;
+    transition: transform 500ms ease;
 
-.contacto__input {
-  font-family: $fuente-principal;
-  border: 0.1rem solid $azul;
-  font-size: 1.3rem;
-  border-radius: 1rem;
-  padding: 0.3rem;
-}
-
-.contacto__form {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.5rem;
-}
-
-.contacto__button {
-  border: none;
-  font-size: 1.5rem;
-  color: #ffffff;
-  background: $azul;
-  border-radius: 3rem;
-  padding: 0.1rem 1rem 0.1rem 1rem;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
 }
