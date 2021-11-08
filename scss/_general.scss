@@ -17,3 +17,13 @@ img,
 svg {
   vertical-align: middle;
 }
+
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}

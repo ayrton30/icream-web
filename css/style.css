@@ -11135,6 +11135,16 @@ svg {
   vertical-align: middle;
 }
 
+.site {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
 .nav_img {
   width: 3.5rem;
 }
@@ -11211,7 +11221,7 @@ svg {
   transition: transform 500ms ease;
 }
 .helados__article:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 .helados__article__title {
   color: #0066ff;
@@ -11234,6 +11244,7 @@ svg {
 }
 .helados__table {
   font-family: "Montserrat", sans-serif;
+  color: #12121b;
   border-color: #0066ff;
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);

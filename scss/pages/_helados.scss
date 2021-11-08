@@ -17,7 +17,7 @@
     transition: transform 500ms ease;
 
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
     }
 
     &__title {
@@ -34,6 +34,7 @@
 
   &__table {
     font-family: $fuente-secundaria;
+    color: $negro;
     border-color: $azul;
     backdrop-filter: blur(2rem);
     -webkit-backdrop-filter: blur(2rem);

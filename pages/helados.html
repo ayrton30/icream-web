@@ -38,13 +38,13 @@
     <title>iCream | Helados populares</title>
   </head>
 
-  <body>
+  <body class="site">
     <!--Etiqueta semántica: header-->
     <header>
       <!--Contenedor del logo y nombre de la marca-->
       <div class="container d-flex justify-content-center mt-2">
         <img class="mx-1 mb-3 nav_img" src="../img/logo.svg" alt="logo" />
-        <h1 class="d-inline nav__title">iCream</h1>
+        <h1 class="d-inline user-select-none nav__title">iCream</h1>
       </div>
 
       <!--Barra de navegación responsive-->
@@ -99,7 +99,15 @@
     </header>
 
     <!--Etiqueta main-->
-    <main class="helados">
+    <main
+      class="
+        site-content
+        d-flex
+        align-items-center
+        justify-content-center
+        helados
+      "
+    >
       <section class="container text-center mt-3">
         <!--Texto de presentación-->
         <h1 class="display-1 fw-normal helados__title">
@@ -247,10 +255,8 @@
             </article>
           </div>
         </div>
-      </section>
 
-      <section class="container text-center mt-3">
-        <h1 class="display-1 fw-normal helados__title">
+        <h1 class="display-1 mt-3 fw-normal helados__title">
           Información nutricional
         </h1>
         <p class="fs-3 lh-1 mb-4">
