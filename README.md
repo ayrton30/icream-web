@@ -3,7 +3,7 @@ Sitio Web de iCream, desarrollado para el curso de Desarrollo Web de CoderHouse.
 
 ![](img/icream-page.png)
 
-Para ver un ejemplo en vivo, **[haz click aquí](https://github.com/ayrton30/icream-web#:~:text=ayrton30.github.io/icream-web/)**.
+Para ver un ejemplo en vivo, **[haz click aquí](https://ayrton30.github.io/icream-web/)**.
 
 ## Caracteristicas
 - Diseño responsive.
