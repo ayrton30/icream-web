@@ -114,73 +114,65 @@
         contacto
       "
     >
-      <!--Contenedor del texto y formulario-->
-      <div
-        class="
-          animate__animated animate__zoomIn
-          container
-          text-center
-          my-3
-          p-4
-          shadow-lg
-          contacto__div
-        "
-      >
-        <!--Título y sub-->
-        <h1 class="display-2 fw-normal contacto__div__title">
-          ¡Contactate con nosotros!
-        </h1>
-        <h1 class="fs-3 mb-4">
-          Puedes enviarnos un pequeño mensaje y te responderemos cuanto antes.
-        </h1>
+      <div class="container animate__animated animate__zoomIn">
+        <!--Contenedor del texto y formulario-->
+        <div class="text-center my-3 p-4 shadow-lg contacto__div">
+          <!--Título y sub-->
+          <h1 class="display-2 fw-normal contacto__div__title">
+            ¡Contactate con nosotros!
+          </h1>
+          <h1 class="fs-3 mb-4">
+            Puedes enviarnos un pequeño mensaje y te responderemos cuanto antes.
+          </h1>
 
-        <!--Formulario-->
-        <form class="d-flex flex-column gap-2" action="">
-          <!--Input de nombre y apellido-->
-          <input
-            class="fs-3 px-2 border-2 contacto__input"
-            type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="Nombre y Apellido"
-          />
+          <!--Formulario-->
+          <form class="d-flex flex-column gap-2" action="">
+            <!--Input de nombre y apellido-->
+            <input
+              class="fs-3 px-2 border-2 contacto__input"
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Nombre y Apellido"
+            />
 
-          <!--Input de mail de contacto-->
-          <input
-            class="fs-3 px-2 border-2 contacto__input"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="example@gmail.com"
-          />
+            <!--Input de mail de contacto-->
+            <input
+              class="fs-3 px-2 border-2 contacto__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@gmail.com"
+            />
 
-          <!--Input de mensaje-->
-          <textarea
-            class="fs-3 px-2 border-2 contacto__input"
-            rows="4"
-            cols="40"
-            name="comment"
-            form="usrform"
-            placeholder="Escribinos!"
-          ></textarea>
+            <!--Input de mensaje-->
+            <textarea
+              class="fs-3 px-2 border-2 contacto__input"
+              rows="4"
+              cols="40"
+              name="comment"
+              form="usrform"
+              placeholder="Escribinos!"
+            ></textarea>
 
-          <!--Confirmación de newsletter-->
-          <div class="fs-5">
-            <input type="checkbox" name="news" id="news" />
-            <label for="news">Deseo recibir el Newsletter</label>
-          </div>
+            <!--Confirmación de newsletter-->
+            <div class="fs-5">
+              <input type="checkbox" name="news" id="news" />
+              <label for="news">Deseo recibir el Newsletter</label>
+            </div>
 
-          <!--Terminos y condiciones-->
-          <div class="fs-5">
-            <input type="checkbox" name="terms" id="terms" />
-            <label for="terms"
-              >He leído y acepto los términos y condiciones de uso</label
-            >
-          </div>
+            <!--Terminos y condiciones-->
+            <div class="fs-5">
+              <input type="checkbox" name="terms" id="terms" />
+              <label for="terms"
+                >He leído y acepto los términos y condiciones de uso</label
+              >
+            </div>
 
-          <!--Botón de confirmación-->
-          <button class="fs-3 link-light contacto__button">Enviar</button>
-        </form>
+            <!--Botón de confirmación-->
+            <button class="fs-3 link-light contacto__button">Enviar</button>
+          </form>
+        </div>
       </div>
     </main>
 
