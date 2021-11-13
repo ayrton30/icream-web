@@ -1,0 +1,52 @@
+@use "../vars" as *;
+
+.tienda {
+  font-family: $fuente-principal;
+
+  &__div {
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+  }
+
+  &__helado {
+    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
+    border-radius: 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    transition: transform 500ms ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &__title {
+      color: $azul;
+    }
+
+    &__img {
+      box-shadow: 0 1rem 3rem 0 rgba($azul, 0.1);
+      border: 3px solid $azul;
+      width: 9rem;
+    }
+  }
+
+  &__button {
+    border: none;
+    background: $azul;
+    font-family: $fuente-secundaria;
+    border-radius: 3rem;
+    transition: transform 500ms ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

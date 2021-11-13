@@ -26,24 +26,9 @@
 
     <!--CSS compilado a partir del style.scss gracias a SASS-->
     <link rel="stylesheet" href="../css/style.css" />
-
-    <!--SEO-->
-    <!--Descripción-->
-    <meta
-      name="description"
-      content="“Nuestros helados son los mejores debido a
-    la materia prima de calidad que utilizamos. Entre los sabores más populares
-    se encuentran los de frutas. Más información en la tabla nutricional."
-    />
-    <!--Palabras claves-->
-    <meta
-      name="keywords"
-      content="icream, helados, vegetales, vegetarianos, artesanal, argentina, contacto, venta"
-    />
     <!--Título-->
-    <title>iCream | Contacto</title>
+    <title>iCream | Tienda Online</title>
   </head>
-
   <body class="site">
     <header>
       <!--Contenedor del logo y nombre de la marca-->
@@ -84,7 +69,9 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link mx-3" href="tienda.html">Tienda Online</a>
+                <a class="nav-link active mx-3" href="tienda.html"
+                  >Tienda Online</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link mx-3" href="helados.html">Helados</a>
@@ -98,9 +85,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active mx-3" href="contacto.html"
-                  >Contacto</a
-                >
+                <a class="nav-link mx-3" href="contacto.html">Contacto</a>
               </li>
             </ul>
           </div>
@@ -113,70 +98,36 @@
       class="
         site-content
         d-flex
+        flex-column
         align-items-center
         justify-content-center
         contacto
       "
     >
-      <div class="container animate__animated animate__zoomIn">
-        <!--Contenedor del texto y formulario-->
-        <div class="text-center my-3 p-4 shadow-lg contacto__div">
-          <!--Título y sub-->
-          <h1 class="display-2 fw-normal contacto__div__title">
-            ¡Contactate con nosotros!
-          </h1>
-          <h1 class="fs-3 mb-4">
-            Puedes enviarnos un pequeño mensaje y te responderemos cuanto antes.
-          </h1>
-
-          <!--Formulario-->
-          <form class="d-flex flex-column gap-2" action="">
-            <!--Input de nombre y apellido-->
-            <input
-              class="fs-3 px-2 border-2 contacto__input"
-              type="text"
-              name="nombre"
-              id="nombre"
-              placeholder="Nombre y Apellido"
-            />
-
-            <!--Input de mail de contacto-->
-            <input
-              class="fs-3 px-2 border-2 contacto__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="example@gmail.com"
-            />
-
-            <!--Input de mensaje-->
-            <textarea
-              class="fs-3 px-2 border-2 contacto__input"
-              rows="4"
-              cols="40"
-              name="comment"
-              form="usrform"
-              placeholder="Escribinos!"
-            ></textarea>
-
-            <!--Confirmación de newsletter-->
-            <div class="fs-5">
-              <input type="checkbox" name="news" id="news" />
-              <label for="news">Deseo recibir el Newsletter</label>
-            </div>
-
-            <!--Terminos y condiciones-->
-            <div class="fs-5">
-              <input type="checkbox" name="terms" id="terms" />
-              <label for="terms"
-                >He leído y acepto los términos y condiciones de uso</label
-              >
-            </div>
-
-            <!--Botón de confirmación-->
-            <button class="fs-3 link-light contacto__button">Enviar</button>
-          </form>
+      <div
+        id="contenedorCombos"
+        class="container justify-content-center d-flex mt-5 gap-2"
+      >
+        <!--Opciones de combo-->
+        <!--Se usa función mostrarHelados para agregar elementos-->
+      </div>
+      <div class="container d-flex flex-column mt-5 gap-3">
+        <!--Opciones de helados disponibles-->
+        <button class="px-3 fs-2 my-1 shadow-lg tienda__button">
+          <a class="link-light tienda__link" href=""
+            ><i class="fas fa-eye"></i> Mostrar helados</a
+          >
+        </button>
+        <!--Sistema de grillas bootstrap-->
+        <div
+          id="contenedorHelados"
+          class="row row-cols-1 row-cols-sm-2 g-3 text-center"
+        >
+          <!--Se usa función mostrarHelados para agregar elementos-->
         </div>
+      </div>
+      <div>
+        <!--Total del carrito-->
       </div>
     </main>
 
@@ -197,6 +148,9 @@
       <!--Información de copyright-->
       <h1 class="fs-5 my-2 text-center">Copyright © iCream, Inc. 1999-2021</h1>
     </footer>
+
+    <!--Script tienda.js-->
+    <script src="../js/tienda.js"></script>
 
     <!-- JavaScript Bundle with Popper -->
     <script

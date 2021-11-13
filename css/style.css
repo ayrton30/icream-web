@@ -11205,15 +11205,17 @@ svg {
   text-decoration: none;
 }
 
-.helados {
+.tienda {
   font-family: "Nunito", sans-serif;
-  color: #12121b;
 }
-.helados__title {
-  color: #0066ff;
+.tienda__div {
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
 }
-.helados__article {
-  height: 32rem;
+.tienda__helado {
   box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
   border-radius: 2rem;
   background: rgba(255, 255, 255, 0.25);
@@ -11221,31 +11223,37 @@ svg {
   -webkit-backdrop-filter: blur(2rem);
   transition: transform 500ms ease;
 }
-.helados__article:hover {
+.tienda__helado:hover {
   transform: scale(1.02);
 }
-.helados__article__title {
+.tienda__helado__title {
   color: #0066ff;
 }
-.helados__article__img--heladoFrutilla {
-  box-shadow: 0 1rem 3rem 0 rgba(233, 150, 144, 0.6);
-  border: 4px solid #e99690;
+.tienda__helado__img {
+  box-shadow: 0 1rem 3rem 0 rgba(0, 102, 255, 0.1);
+  border: 3px solid #0066ff;
   width: 9rem;
 }
-.helados__article__img--heladoDulceLeche {
-  box-shadow: 0 1rem 3rem 0 rgba(206, 134, 73, 0.6);
-  border: 4px solid #ce8649;
-  width: 9rem;
+.tienda__button {
+  border: none;
+  background: #0066ff;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 3rem;
+  transition: transform 500ms ease;
 }
-.helados__article__img--heladoVainilla {
-  box-shadow: 0 1rem 3rem 0 rgba(239, 178, 85, 0.6);
-  border: 4px solid #efb255;
-  width: 9rem;
+.tienda__button:hover {
+  transform: scale(1.05);
 }
-.helados__article__img--heladoChocolate {
-  box-shadow: 0 1rem 3rem 0 rgba(66, 38, 27, 0.6);
-  border: 4px solid #42261b;
-  width: 9rem;
+.tienda__link {
+  text-decoration: none;
+}
+
+.helados {
+  font-family: "Nunito", sans-serif;
+  color: #12121b;
+}
+.helados__title {
+  color: #0066ff;
 }
 .helados__table {
   font-family: "Montserrat", sans-serif;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="../img/logo.svg" />
     <!--Fuentes de Google Fonts-->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Nunito:wght@200;400;600;900&display=swap"
@@ -82,6 +83,11 @@
                 >
               </li>
               <li class="nav-item">
+                <a class="nav-link mx-3" href="./pages/tienda.html"
+                  >Tienda Online</a
+                >
+              </li>
+              <li class="nav-item">
                 <a class="nav-link mx-3" href="./pages/helados.html">Helados</a>
               </li>
               <li class="nav-item">
@@ -130,12 +136,19 @@
           <p class="text-break fs-4 lh-1">
             Pedilo online o visitá nuestras sucursales en todo el país.
           </p>
-          <!--Botón que lleva pag. helados.html-->
-          <button class="px-3 fs-2 my-1 shadow-lg index__button">
-            <a class="link-light index__link" href="./pages/helados.html"
-              >Ver productos</a
-            >
-          </button>
+          <div class="d-flex gap-2">
+            <!--Botón que lleva pag. helados.html-->
+            <button class="px-3 fs-2 my-1 shadow-lg index__button">
+              <a class="link-light index__link" href="./pages/helados.html"
+                >Ver más</a
+              >
+            </button>
+            <button class="px-3 fs-2 my-1 shadow-lg index__button">
+              <a class="link-light index__link" href="./pages/tienda.html"
+                ><i class="fas fa-shopping-bag"></i
+              ></a>
+            </button>
+          </div>
         </div>
       </div>
     </main>

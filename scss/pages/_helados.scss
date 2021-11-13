@@ -8,32 +8,6 @@
     color: $azul;
   }
 
-  &__article {
-    height: 32rem;
-    box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.158);
-    border-radius: 2rem;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(2rem);
-    -webkit-backdrop-filter: blur(2rem);
-    transition: transform 500ms ease;
-
-    &:hover {
-      transform: scale(1.02);
-    }
-
-    &__title {
-      color: $azul;
-    }
-
-    @each $name-color, $bgcolor in $coloresHelados {
-      &__img--#{$name-color} {
-        box-shadow: 0 1rem 3rem 0 rgba($bgcolor, 0.6);
-        border: 4px solid $bgcolor;
-        width: 9rem;
-      }
-    }
-  }
-
   &__table {
     font-family: $fuente-secundaria;
     color: $negro;
