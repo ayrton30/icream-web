@@ -7,6 +7,55 @@ class Helado {
   }
 }
 
+class Combo {
+  constructor(id) {
+    this.id = id;
+    switch (id) {
+      case 1:
+        this.precio = 299;
+        this.cantidad = "1/4";
+        break;
+      case 2:
+        this.precio = 549;
+        this.cantidad = "1/2";
+        break;
+      case 3:
+        this.precio = 999;
+        this.cantidad = "1";
+        break;
+
+      default:
+        break;
+    }
+  }
+}
+
+class carroDeCompras {
+  constructor() {
+    this.carro = [];
+  }
+
+  agregarCombo(combo) {
+    this.carro.push(combo);
+  }
+
+  quitarCombo(combo) {
+    let indexCombo = this.carro.findIndex((i) => i.id === combo.id);
+    console.log(indexCombo);
+    if (indexCombo > -1) {
+      this.carro.splice(indexCombo, 1);
+    }
+  }
+
+  totalCompra() {
+    let total = 0;
+    for (const elementoCarro of this.carro) {
+      total += elementoCarro.precio;
+    }
+    return total;
+  }
+}
+
 function mostrarHelados(helados) {
   let contenedorHelados = document.getElementById("contenedorHelados");
 
@@ -28,29 +77,6 @@ function mostrarHelados(helados) {
   }
 }
 
-class Combo {
-  constructor(cantidadPromo) {
-    this.cantidadPromo = cantidadPromo;
-    switch (cantidadPromo) {
-      case "1/4":
-        this.precio = 300;
-        break;
-      case "1/2":
-        this.precio = 550;
-        break;
-      case "1":
-        this.precio = 999;
-        break;
-
-      default:
-        break;
-    }
-  }
-
-  //Verifica que solo se eliga la cantidad max de helado
-  //agregarHelado(helado) {}
-}
-
 function mostrarCombos(combos) {
   let contenedorCombos = document.getElementById("contenedorCombos");
 
@@ -59,23 +85,121 @@ function mostrarCombos(combos) {
     contenedor.className = "tienda__div p-2 text-center";
     //Definimos el innerHTML del elemento con una plantilla de texto
     contenedor.innerHTML = `<i class="fs-1 fas fa-glass-whiskey"></i>
-    <h1 class="fs-3">${combo.cantidadPromo} kg.</h1>
-    <button class="px-3 fs-4 shadow-lg tienda__button">
-      <a class="link-light tienda__link" href=""
-        ><i class="fas fa-cart-plus"></i> $${combo.precio}</a
-      >
-    </button>`;
+    <h1 class="fs-3">${combo.cantidad} kg.</h1>`;
+
+    //Creacion boton principal para agregar al carrito
+    let boton = document.createElement("button");
+    boton.className = "px-3 fs-4 shadow-lg text-light tienda__button";
+    boton.innerHTML = `<i class="fas fa-cart-plus"></i> $${combo.precio}`;
+    boton.id = combo.id;
+
+    boton.addEventListener("click", (event) => {
+      console.log("El usuario agregó un producto al carrito");
+      console.log(event.currentTarget.id);
+      carrito.agregarCombo(new Combo(parseInt(event.currentTarget.id)));
+      console.log(carrito);
+
+      //Se muestra todos los combos comprados!
+      mostrarCarrito(carrito);
+    });
+
     contenedorCombos.appendChild(contenedor);
+    contenedor.appendChild(boton);
   }
 }
 
-// Se cargan los combos disponibles
-let comboCuarto = new Combo("1/4");
-let comboMedio = new Combo("1/2");
-let comboKilo = new Combo("1");
-let combosDisponibles = [comboCuarto, comboMedio, comboKilo];
+// Manejadores de eventos (boton) para agregar o quitar del carrito
+function sumaCombo(evento) {
+  console.log("boton de suma");
+  carrito.agregarCombo(new Combo(parseInt(evento.currentTarget.id)));
+  mostrarCarrito(carrito);
+}
 
+function restaCombo(evento) {
+  console.log("boton de resta");
+  carrito.quitarCombo(new Combo(parseInt(evento.currentTarget.id)));
+  mostrarCarrito(carrito);
+  //@to-DO
+}
+
+function mostrarCarrito(carrito) {
+  let contenedorCarrito = document.getElementById("contenedorCarrito");
+  contenedorCarrito.innerHTML = "";
+  let combos = carrito.carro;
+  const cantidadIdCombos = 3; //Existen 3 combos!
+  let cantidadesCombo = [];
+
+  //cantidadesCombo es un array que contiene la cantidad de combos comprados
+  for (let i = 1; i <= cantidadIdCombos; i++) {
+    const count = combos.filter((obj) => obj.id === i).length;
+    cantidadesCombo[i - 1] = count;
+
+    // Solo se dibuja los combos seleccionados
+    if (count != 0) {
+      let contenedor = document.createElement("div");
+      contenedor.className = "tienda__div mt-3 p-3";
+      //Definimos el innerHTML del elemento con una plantilla de texto
+      contenedor.innerHTML = `<div class="d-flex justify-content-between">
+      <h1 class="fs-4">Combo ${new Combo(i).cantidad} kg.</h1>
+      <div class="d-flex justify-content-end align-items-center">
+        <div id="${i}"
+          onclick="restaCombo(event);"
+          class="rounded-3 p-1 tienda__button text-light"
+        >
+          <i class="fas fa-minus"></i>
+        </div>
+        <div><h1 class="mb-0 px-1">${count}</h1></div>
+
+        <div id="${i}" 
+        onclick="sumaCombo(event);" 
+        class="rounded-3 p-1 tienda__button text-light">
+          <i class="fas fa-plus"></i>
+        </div>
+      </div>
+    </div>
+    <div class="mt-2 d-flex justify-content-between">
+      <h1 class="fs-5">Sabor:</h1>
+      <h1 class="fs-5">Subtotal: $${new Combo(i).precio * count}</h1>
+    </div>`;
+      contenedorCarrito.appendChild(contenedor);
+    }
+  }
+
+  let contenedor = document.createElement("h1");
+  contenedor.className = "mt-3 fs-2 text-end";
+  contenedor.innerText = `Total de la compra: $${carrito.totalCompra()}`;
+  contenedorCarrito.appendChild(contenedor);
+
+  console.log(cantidadesCombo);
+}
+
+//MAIN
+
+// Se crea el carrito de compras
+let carrito = new carroDeCompras();
+
+// Se inicializan y guardan los combos disponibles
+const combosDisponibles = [new Combo(1), new Combo(2), new Combo(3)];
+
+const guardarLocal = (clave, valor) => {
+  localStorage.setItem(clave, valor);
+};
+
+// Se almacena array completo
+guardarLocal("combosDisponibles", JSON.stringify(combosDisponibles));
+
+//Obtenemos el listado almacenado
+const combosAlmacenados = JSON.parse(localStorage.getItem("combosDisponibles"));
+const combos = [];
+//Iteramos almacenados con for...of para transformar todos sus objetos a tipo combo.
+for (const objeto of combosAlmacenados) {
+  combos.push(new Combo(objeto.id));
+}
+mostrarCombos(combos);
+
+// mostrarHelados(heladosDisponibles);
 // Se cargan los helados disponibles
+/*
 let heladoFrutilla = new Helado(
   "frutilla",
   "Delicioso helado a base de agua, elaborado con fresas, frutillas, agraz y mora frescas de la región. Especial para las personas que adoran la frescura particular de una frutilla.",
@@ -106,111 +230,4 @@ let heladosDisponibles = [
   heladoDulceLeche,
   heladoChocolate,
 ];
-
-mostrarHelados(heladosDisponibles);
-mostrarCombos(combosDisponibles);
-
-/*
-  // function(element) element:the current element being processed in the array.
-  function existeHeladoCarro(elementoCarro) {
-    // En cada posicion del Array de carro tenemos otro Array donde
-    // carro = [elementoCarro0, elementoCarro1, ..., elementoCarroN]
-    // elementoCarroN[0] = helado
-    // elementoCarroN[1] = cantidad de gramos
-  
-    let heladoCarro = elementoCarro[0];
-    return heladoCarro.sabor == this;
-  }
-  
-  class carroDeCompras {
-    constructor() {
-      this.carro = [];
-    }
-  
-    agregarHelado(helado, cantidadGramos) {
-      const index = this.carro.findIndex(existeHeladoCarro, helado.sabor);
-  
-      // No hay helado de sabor cargado en el carro
-      if (index == -1) {
-        this.carro.push([helado, cantidadGramos]);
-      } else {
-        this.carro[index][1] = this.carro[index][1] + cantidadGramos;
-      }
-    }
-  
-    quitarHelado(helado, cantidadGramos) {
-      const index = this.carro.findIndex(existeHeladoCarro, helado.sabor);
-      if (index != -1) {
-        let nuevaCantidadGramos = this.carro[index][1] - cantidadGramos;
-        if (nuevaCantidadGramos > 0) {
-          this.carro[index][1] = nuevaCantidadGramos;
-        } else {
-          //Error
-        }
-      } else {
-        //No hay helado que quitar
-      }
-    }
-  
-    totalCompra() {
-      let total = 0;
-      for (const elementoCarro of this.carro) {
-        let helado = elementoCarro[0];
-        let cantidadGramos = elementoCarro[1];
-        total += helado.precio * cantidadGramos;
-      }
-      return total;
-    }
-  
-    //comprarUnKilo() se permiten hasta 4 sabores
-    //comprarMedioKilo() se permiten hasta 3 sabores
-    //comprarUnCuarto() se permiten hasta 2 sabores
-  }
-  
-  // Se crea el carrito de compras
-  let carrito = new carroDeCompras();
-  
-  /*
-  carrito.agregarHelado(heladoFrutilla, 2);
-  carrito.agregarHelado(heladoFrutilla, 2);
-  carrito.agregarHelado(heladoVainilla, 3);
-  carrito.agregarHelado(heladoVainilla, 3);
-  console.log(carrito);
-  carrito.quitarHelado(heladoFrutilla, 1);
-  carrito.quitarHelado(heladoVainilla, 1);
-  console.log(carrito);
-  
-  
-  // Simulador de menú de compras
-  let opcionHelado = parseInt(
-    prompt(`
-  ¿Qué helado desea comprar?
-  Ingrese el helado que quiere comprar:
-  1. Helado de frutilla
-  2. Helado de vainilla
-  3. Helado de dulce de leche
-  4. Helado de chocolate
-  `)
-  );
-  
-  let opcionCantidad = parseFloat(prompt("Ingrese la cantidad de gramos"));
-  switch (opcionHelado) {
-    case 1:
-      carrito.agregarHelado(heladoFrutilla, opcionCantidad);
-      break;
-    case 2:
-      carrito.agregarHelado(heladoVainilla, opcionCantidad);
-      break;
-    case 3:
-      carrito.agregarHelado(heladoDulceLeche, opcionCantidad);
-      break;
-    case 4:
-      carrito.agregarHelado(heladoChocolate, opcionCantidad);
-      break;
-    default:
-      break;
-  }
-  
-  alert("El total de la compra es " + carrito.totalCompra());
-  console.log();
-  */
+*/
