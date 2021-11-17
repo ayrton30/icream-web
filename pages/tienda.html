@@ -105,39 +105,33 @@
         contacto
       "
     >
+      <!--Para helados-->
+      <div class="container d-flex flex-column text-center gap-3">
+        <!--Opciones de helados disponibles-->
+        <h1
+          id="btn_helados"
+          class="p-4 mt-2 px-3 fs-3 fw-bold my-1 shadow-lg tienda__div"
+        >
+          <i class="fas fa-eye"></i> Mostrar helados
+        </h1>
+
+        <div
+          id="contenedorHelados"
+          class="row row-cols-1 row-cols-sm-2 g-3 text-center"
+        ></div>
+      </div>
       <div
         id="contenedorCombos"
-        class="container justify-content-center d-flex mt-5 gap-2"
+        class="container justify-content-center d-flex flex-wrap mt-5 gap-2"
       >
         <!--Opciones de combo-->
         <!--Se usa función mostrarHelados para agregar elementos-->
       </div>
 
       <!--Carrito de compras-->
-      <div id="contenedorCarrito" class=" mt-3 container tienda__div">
-        <h1 class="mt-3 fs-2 text-end" id="totalCarro">
-          Total de la compra: $0
-        </h1>
+      <div id="contenedorCarrito">
+        <h1 id="totalCarro"></h1>
       </div>
-
-      <!--Para helados-->
-      <div class="container d-flex flex-column mt-5 gap-3">
-        <!--Opciones de helados disponibles-->
-        <button class="px-3 fs-2 my-1 shadow-lg tienda__button">
-          <a id="btn_helados" class="link-light tienda__link"
-            ><i class="fas fa-eye"></i> Mostrar helados</a
-          >
-        </button>
-        
-        <div
-          id="contenedorHelados"
-          class="row row-cols-1 row-cols-sm-2 g-3 text-center"
-        >
-          <!--Se usa función mostrarHelados para agregar elementos-->
-        <!--
-        </div>
-      </div>
-    -->
     </main>
 
     <!--Footer-->

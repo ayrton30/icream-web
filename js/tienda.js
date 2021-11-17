@@ -79,6 +79,7 @@ for (const objeto of combosAlmacenados) {
   combos.push(new Combo(objeto.id));
 }
 mostrarCombos(combos);
+mostrarCarrito(carrito);
 
 // Se cargan los helados disponibles
 let heladoFrutilla = new Helado(

@@ -1,0 +1,18 @@
+[
+  {
+    "codigoDescuento": "PRIMERA",
+    "porcentaje": 0.2
+  },
+  {
+    "codigoDescuento": "PROMO10",
+    "porcentaje": 0.1
+  },
+  {
+    "codigoDescuento": "HOTSALE",
+    "porcentaje": 0.15
+  },
+  {
+    "codigoDescuento": "BLACKFRIDAY",
+    "porcentaje": 0.3
+  }
+]
