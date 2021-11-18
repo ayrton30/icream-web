@@ -56,17 +56,21 @@ class carroDeCompras {
   }
 }
 
+const guardarLocal = (clave, valor) => {
+  localStorage.setItem(clave, valor);
+};
+
 //MAIN
 
 // Se crea el carrito de compras
 let carrito = new carroDeCompras();
+// Si aun no se guardo variable en localStorage
+if (localStorage.getItem("combosCarrito") == null) {
+  guardarLocal("combosCarrito", JSON.stringify(carrito.carro));
+}
 
 // Se inicializan y guardan los combos disponibles
 const combosDisponibles = [new Combo(1), new Combo(2), new Combo(3)];
-
-const guardarLocal = (clave, valor) => {
-  localStorage.setItem(clave, valor);
-};
 
 // Se almacena array completo
 guardarLocal("combosDisponibles", JSON.stringify(combosDisponibles));
