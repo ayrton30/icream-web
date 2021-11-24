@@ -11244,6 +11244,17 @@ svg {
 .tienda__button:hover {
   transform: scale(1.05);
 }
+.tienda__sabor {
+  box-shadow: 0 1rem 3rem 0 rgba(0, 102, 255, 0.1);
+  width: 3rem;
+  transition: transform 500ms ease;
+}
+.tienda__sabor-selected {
+  border: 3px solid #0066ff;
+}
+.tienda__sabor:hover {
+  transform: scale(1.05);
+}
 .tienda__link {
   text-decoration: none;
 }
